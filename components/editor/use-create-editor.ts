@@ -34,10 +34,6 @@ import {
   MediaEmbedPlugin,
   VideoPlugin,
 } from '@udecode/plate-media/react';
-import {
-  MentionInputPlugin,
-  MentionPlugin,
-} from '@udecode/plate-mention/react';
 import { SlashInputPlugin } from '@udecode/plate-slash-command/react';
 import { TogglePlugin } from '@udecode/plate-toggle/react';
 
@@ -62,8 +58,6 @@ import { LinkElement } from '@/components/plate-ui/link-element';
 import { MediaAudioElement } from '@/components/plate-ui/media-audio-element';
 import { MediaEmbedElement } from '@/components/plate-ui/media-embed-element';
 import { MediaVideoElement } from '@/components/plate-ui/media-video-element';
-import { MentionElement } from '@/components/plate-ui/mention-element';
-import { MentionInputElement } from '@/components/plate-ui/mention-input-element';
 import { ParagraphElement } from '@/components/plate-ui/paragraph-element';
 import { withPlaceholders } from '@/components/plate-ui/placeholder';
 import { SlashInputElement } from '@/components/plate-ui/slash-input-element';
@@ -98,8 +92,6 @@ export const useCreateEditor = () => {
         [KbdPlugin.key]: KbdLeaf,
         [LinkPlugin.key]: LinkElement,
         [MediaEmbedPlugin.key]: MediaEmbedElement,
-        [MentionInputPlugin.key]: MentionInputElement,
-        [MentionPlugin.key]: MentionElement,
         [ParagraphPlugin.key]: ParagraphElement,
         [SlashInputPlugin.key]: SlashInputElement,
         [StrikethroughPlugin.key]: withProps(PlateLeaf, { as: 's' }),
