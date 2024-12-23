@@ -1,7 +1,5 @@
 'use client';
 
-import React from 'react';
-
 import type { DropdownMenuProps } from '@radix-ui/react-dropdown-menu';
 
 import { BlockquotePlugin } from '@udecode/plate-block-quote/react';
@@ -13,7 +11,6 @@ import {
   useEditorRef,
 } from '@udecode/plate-common/react';
 import { DatePlugin } from '@udecode/plate-date/react';
-import { ExcalidrawPlugin } from '@udecode/plate-excalidraw/react';
 import { HEADING_KEYS } from '@udecode/plate-heading';
 import { TocPlugin } from '@udecode/plate-heading/react';
 import { HorizontalRulePlugin } from '@udecode/plate-horizontal-rule/react';
@@ -166,11 +163,6 @@ const groups: Group[] = [
         icon: <FilmIcon />,
         label: 'Embed',
         value: MediaEmbedPlugin.key,
-      },
-      {
-        icon: <PenToolIcon />,
-        label: 'Excalidraw',
-        value: ExcalidrawPlugin.key,
       },
     ].map((item) => ({
       ...item,
