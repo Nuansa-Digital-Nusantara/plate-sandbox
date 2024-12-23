@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback, useState } from 'react';
+import { useCallback, useState } from 'react';
 
 import type { DropdownMenuProps } from '@radix-ui/react-dropdown-menu';
 
@@ -89,24 +89,12 @@ export function MediaToolbarButton({
 }: DropdownMenuProps & { nodeType: string }) {
   const currentConfig = MEDIA_CONFIG[nodeType];
 
-  const editor = useEditorRef();
   const openState = useOpenState();
   const [dialogOpen, setDialogOpen] = useState(false);
-
-  const { openFilePicker } = useFilePicker({
-    accept: currentConfig.accept,
-    multiple: true,
-    onFilesSelected: ({ plainFiles: updatedFiles }) => {
-      (editor as any).tf.insert.media(updatedFiles);
-    },
-  });
 
   return (
     <>
       <ToolbarSplitButton
-        onClick={() => {
-          openFilePicker();
-        }}
         onKeyDown={(e) => {
           if (e.key === 'ArrowDown') {
             e.preventDefault();
@@ -131,10 +119,6 @@ export function MediaToolbarButton({
             alignOffset={-32}
           >
             <DropdownMenuGroup>
-              <DropdownMenuItem onSelect={() => openFilePicker()}>
-                {currentConfig.icon}
-                Upload from computer
-              </DropdownMenuItem>
               <DropdownMenuItem onSelect={() => setDialogOpen(true)}>
                 <LinkIcon />
                 Insert via URL

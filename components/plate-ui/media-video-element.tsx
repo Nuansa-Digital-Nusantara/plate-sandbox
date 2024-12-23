@@ -26,7 +26,6 @@ export const MediaVideoElement = withHOC(
       const {
         align = 'center',
         embed,
-        isUpload,
         isYoutube,
         readOnly,
         unsafeUrl,
@@ -74,9 +73,10 @@ export const MediaVideoElement = withHOC(
                   options={{ direction: 'right' }}
                 />
 
-                {!isUpload && isYoutube && (
+                {isYoutube && (
                   <div ref={handleRef}>
                     <LiteYouTubeEmbed
+                    // biome-ignore lint/style/noNonNullAssertion:
                       id={embed!.id!}
                       title="youtube"
                       wrapperClass={cn(
@@ -101,7 +101,7 @@ export const MediaVideoElement = withHOC(
                 )}
 
                 {/* TODO: Lazy load */}
-                {isUpload && isEditorMounted && (
+                {isEditorMounted && (
                   <div ref={handleRef}>
                     <ReactPlayer
                       height="100%"

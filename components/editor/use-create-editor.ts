@@ -64,7 +64,6 @@ import { LinkElement } from '@/components/plate-ui/link-element';
 import { MediaAudioElement } from '@/components/plate-ui/media-audio-element';
 import { MediaEmbedElement } from '@/components/plate-ui/media-embed-element';
 import { MediaFileElement } from '@/components/plate-ui/media-file-element';
-import { MediaPlaceholderElement } from '@/components/plate-ui/media-placeholder-element';
 import { MediaVideoElement } from '@/components/plate-ui/media-video-element';
 import { MentionElement } from '@/components/plate-ui/mention-element';
 import { MentionInputElement } from '@/components/plate-ui/mention-input-element';
@@ -106,7 +105,6 @@ export const useCreateEditor = () => {
         [MentionInputPlugin.key]: MentionInputElement,
         [MentionPlugin.key]: MentionElement,
         [ParagraphPlugin.key]: ParagraphElement,
-        [PlaceholderPlugin.key]: MediaPlaceholderElement,
         [SlashInputPlugin.key]: SlashInputElement,
         [StrikethroughPlugin.key]: withProps(PlateLeaf, { as: 's' }),
         [SubscriptPlugin.key]: withProps(PlateLeaf, { as: 'sub' }),
