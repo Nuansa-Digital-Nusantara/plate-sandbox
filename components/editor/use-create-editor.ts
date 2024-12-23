@@ -15,7 +15,6 @@ import {
   CodeLinePlugin,
   CodeSyntaxPlugin,
 } from '@udecode/plate-code-block/react';
-import { CommentsPlugin } from '@udecode/plate-comments/react';
 import {
   ParagraphPlugin,
   PlateLeaf,
@@ -64,7 +63,6 @@ import { CodeLineElement } from '@/components/plate-ui/code-line-element';
 import { CodeSyntaxLeaf } from '@/components/plate-ui/code-syntax-leaf';
 import { ColumnElement } from '@/components/plate-ui/column-element';
 import { ColumnGroupElement } from '@/components/plate-ui/column-group-element';
-import { CommentLeaf } from '@/components/plate-ui/comment-leaf';
 import { DateElement } from '@/components/plate-ui/date-element';
 import { EmojiInputElement } from '@/components/plate-ui/emoji-input-element';
 import { ExcalidrawElement } from '@/components/plate-ui/excalidraw-element';
@@ -107,7 +105,6 @@ export const useCreateEditor = () => {
         [CodeSyntaxPlugin.key]: CodeSyntaxLeaf,
         [ColumnItemPlugin.key]: ColumnElement,
         [ColumnPlugin.key]: ColumnGroupElement,
-        [CommentsPlugin.key]: CommentLeaf,
         [DatePlugin.key]: DateElement,
         [EmojiInputPlugin.key]: EmojiInputElement,
         [ExcalidrawPlugin.key]: ExcalidrawElement,

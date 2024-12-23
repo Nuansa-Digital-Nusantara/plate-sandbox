@@ -37,7 +37,6 @@ import { MoreDropdownMenu } from '@/components/plate-ui/more-dropdown-menu';
 
 import { AlignDropdownMenu } from './align-dropdown-menu';
 import { ColorDropdownMenu } from './color-dropdown-menu';
-import { CommentToolbarButton } from './comment-toolbar-button';
 import { EmojiDropdownMenu } from './emoji-dropdown-menu';
 import { RedoToolbarButton, UndoToolbarButton } from './history-toolbar-button';
 import { IndentListToolbarButton } from './indent-list-toolbar-button';
@@ -157,7 +156,6 @@ export function FixedToolbarButtons() {
         <MarkToolbarButton nodeType={HighlightPlugin.key} tooltip="Highlight">
           <HighlighterIcon />
         </MarkToolbarButton>
-        <CommentToolbarButton />
       </ToolbarGroup>
 
       <ToolbarGroup>
