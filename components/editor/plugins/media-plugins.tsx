@@ -2,7 +2,6 @@
 
 import { CaptionPlugin } from '@udecode/plate-caption/react';
 import {
-  AudioPlugin,
   ImagePlugin,
   MediaEmbedPlugin,
   PlaceholderPlugin,
@@ -18,13 +17,11 @@ export const mediaPlugins = [
   }),
   MediaEmbedPlugin,
   VideoPlugin,
-  AudioPlugin,
   CaptionPlugin.configure({
     options: {
       plugins: [
         ImagePlugin,
         VideoPlugin,
-        AudioPlugin,
         MediaEmbedPlugin,
       ],
     },

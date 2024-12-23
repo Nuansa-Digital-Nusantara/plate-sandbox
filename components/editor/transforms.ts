@@ -33,12 +33,10 @@ import {
   InlineEquationPlugin,
 } from "@udecode/plate-math/react";
 import {
-  insertAudioPlaceholder,
   insertMedia,
   insertVideoPlaceholder,
 } from "@udecode/plate-media";
 import {
-  AudioPlugin,
   ImagePlugin,
   MediaEmbedPlugin,
   VideoPlugin,
@@ -69,8 +67,6 @@ const insertBlockMap: Record<
 > = {
   [ACTION_THREE_COLUMNS]: (editor) =>
     insertColumnGroup(editor, { columns: 3, select: true }),
-  [AudioPlugin.key]: (editor) =>
-    insertAudioPlaceholder(editor, { select: true }),
   [CalloutPlugin.key]: (editor) => insertCallout(editor, { select: true }),
   [CodeBlockPlugin.key]: (editor) => insertCodeBlock(editor, { select: true }),
   [EquationPlugin.key]: (editor) => insertEquation(editor, { select: true }),

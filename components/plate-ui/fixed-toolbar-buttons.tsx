@@ -17,7 +17,6 @@ import {
 import { HighlightPlugin } from '@udecode/plate-highlight/react';
 import { ListStyleType } from '@udecode/plate-indent-list';
 import {
-  AudioPlugin,
   ImagePlugin,
   VideoPlugin,
 } from '@udecode/plate-media/react';
@@ -131,7 +130,6 @@ export function FixedToolbarButtons() {
           <ToolbarGroup>
             <MediaToolbarButton nodeType={ImagePlugin.key} />
             <MediaToolbarButton nodeType={VideoPlugin.key} />
-            <MediaToolbarButton nodeType={AudioPlugin.key} />
           </ToolbarGroup>
 
           <ToolbarGroup>

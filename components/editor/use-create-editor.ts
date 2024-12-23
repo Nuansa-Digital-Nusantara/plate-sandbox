@@ -29,7 +29,6 @@ import { KbdPlugin } from '@udecode/plate-kbd/react';
 import { ColumnItemPlugin, ColumnPlugin } from '@udecode/plate-layout/react';
 import { LinkPlugin } from '@udecode/plate-link/react';
 import {
-  AudioPlugin,
   ImagePlugin,
   MediaEmbedPlugin,
   VideoPlugin,
@@ -55,7 +54,6 @@ import { HrElement } from '@/components/plate-ui/hr-element';
 import { ImageElement } from '@/components/plate-ui/image-element';
 import { KbdLeaf } from '@/components/plate-ui/kbd-leaf';
 import { LinkElement } from '@/components/plate-ui/link-element';
-import { MediaAudioElement } from '@/components/plate-ui/media-audio-element';
 import { MediaEmbedElement } from '@/components/plate-ui/media-embed-element';
 import { MediaVideoElement } from '@/components/plate-ui/media-video-element';
 import { ParagraphElement } from '@/components/plate-ui/paragraph-element';
@@ -68,7 +66,6 @@ export const useCreateEditor = () => {
   return usePlateEditor({
     override: {
       components: withPlaceholders({
-        [AudioPlugin.key]: MediaAudioElement,
         [BlockquotePlugin.key]: BlockquoteElement,
         [BoldPlugin.key]: withProps(PlateLeaf, { as: 'strong' }),
         [CodeBlockPlugin.key]: CodeBlockElement,

@@ -7,12 +7,10 @@ import type { DropdownMenuProps } from '@radix-ui/react-dropdown-menu';
 import { insertNodes, isUrl } from '@udecode/plate-common';
 import { useEditorRef } from '@udecode/plate-common/react';
 import {
-  AudioPlugin,
   ImagePlugin,
   VideoPlugin,
 } from '@udecode/plate-media/react';
 import {
-  AudioLinesIcon,
   FilmIcon,
   ImageIcon,
   LinkIcon,
@@ -53,12 +51,6 @@ const MEDIA_CONFIG: Record<
     tooltip: string;
   }
 > = {
-  [AudioPlugin.key]: {
-    accept: ['audio/*'],
-    icon: <AudioLinesIcon className="size-4" />,
-    title: 'Insert Audio',
-    tooltip: 'Audio',
-  },
   [ImagePlugin.key]: {
     accept: ['image/*'],
     icon: <ImageIcon className="size-4" />,
