@@ -1,5 +1,4 @@
 import { withProps } from '@udecode/cn';
-import { AIPlugin } from '@udecode/plate-ai/react';
 import {
   BoldPlugin,
   CodePlugin,
@@ -45,11 +44,9 @@ import {
 import { SlashInputPlugin } from '@udecode/plate-slash-command/react';
 import { TogglePlugin } from '@udecode/plate-toggle/react';
 
-import { copilotPlugins } from '@/components/editor/plugins/copilot-plugins';
 import { editorPlugins } from '@/components/editor/plugins/editor-plugins';
 import { FixedToolbarPlugin } from '@/components/editor/plugins/fixed-toolbar-plugin';
 import { FloatingToolbarPlugin } from '@/components/editor/plugins/floating-toolbar-plugin';
-import { AILeaf } from '@/components/plate-ui/ai-leaf';
 import { BlockquoteElement } from '@/components/plate-ui/blockquote-element';
 import { CodeBlockElement } from '@/components/plate-ui/code-block-element';
 import { CodeLeaf } from '@/components/plate-ui/code-leaf';
@@ -83,7 +80,6 @@ export const useCreateEditor = () => {
   return usePlateEditor({
     override: {
       components: withPlaceholders({
-        [AIPlugin.key]: AILeaf,
         [AudioPlugin.key]: MediaAudioElement,
         [BlockquotePlugin.key]: BlockquoteElement,
         [BoldPlugin.key]: withProps(PlateLeaf, { as: 'strong' }),
@@ -125,7 +121,6 @@ export const useCreateEditor = () => {
       }),
     },
     plugins: [
-      ...copilotPlugins,
       ...editorPlugins,
       FixedToolbarPlugin,
       FloatingToolbarPlugin,
@@ -134,16 +129,6 @@ export const useCreateEditor = () => {
       {
         children: [{ text: 'Playground' }],
         type: 'h1',
-      },
-      {
-        children: [
-          { text: 'A rich-text editor with AI capabilities. Try the ' },
-          { bold: true, text: 'AI commands' },
-          { text: ' or use ' },
-          { kbd: true, text: 'Cmd+J' },
-          { text: ' to open the AI menu.' },
-        ],
-        type: ParagraphPlugin.key,
       },
     ],
   });
