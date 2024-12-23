@@ -3,7 +3,6 @@
 import { HorizontalRulePlugin } from '@udecode/plate-horizontal-rule/react';
 import {
   AudioPlugin,
-  FilePlugin,
   ImagePlugin,
   MediaEmbedPlugin,
   VideoPlugin,
@@ -18,7 +17,6 @@ export const deletePlugins = [
           ImagePlugin.key,
           VideoPlugin.key,
           AudioPlugin.key,
-          FilePlugin.key,
           MediaEmbedPlugin.key,
           HorizontalRulePlugin.key,
         ],

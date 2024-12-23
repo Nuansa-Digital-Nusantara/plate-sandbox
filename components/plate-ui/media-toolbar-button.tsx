@@ -8,19 +8,16 @@ import { insertNodes, isUrl } from '@udecode/plate-common';
 import { useEditorRef } from '@udecode/plate-common/react';
 import {
   AudioPlugin,
-  FilePlugin,
   ImagePlugin,
   VideoPlugin,
 } from '@udecode/plate-media/react';
 import {
   AudioLinesIcon,
-  FileUpIcon,
   FilmIcon,
   ImageIcon,
   LinkIcon,
 } from 'lucide-react';
 import { toast } from 'sonner';
-import { useFilePicker } from 'use-file-picker';
 
 import {
   AlertDialog,
@@ -61,12 +58,6 @@ const MEDIA_CONFIG: Record<
     icon: <AudioLinesIcon className="size-4" />,
     title: 'Insert Audio',
     tooltip: 'Audio',
-  },
-  [FilePlugin.key]: {
-    accept: ['*'],
-    icon: <FileUpIcon className="size-4" />,
-    title: 'Insert File',
-    tooltip: 'File',
   },
   [ImagePlugin.key]: {
     accept: ['image/*'],
@@ -164,7 +155,6 @@ function MediaUrlDialogContent({
     setOpen(false);
     insertNodes(editor, {
       children: [{ text: '' }],
-      name: nodeType === FilePlugin.key ? url.split('/').pop() : undefined,
       type: nodeType,
       url,
     });

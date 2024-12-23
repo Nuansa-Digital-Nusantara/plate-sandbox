@@ -34,13 +34,11 @@ import {
 } from "@udecode/plate-math/react";
 import {
   insertAudioPlaceholder,
-  insertFilePlaceholder,
   insertMedia,
   insertVideoPlaceholder,
 } from "@udecode/plate-media";
 import {
   AudioPlugin,
-  FilePlugin,
   ImagePlugin,
   MediaEmbedPlugin,
   VideoPlugin,
@@ -76,7 +74,6 @@ const insertBlockMap: Record<
   [CalloutPlugin.key]: (editor) => insertCallout(editor, { select: true }),
   [CodeBlockPlugin.key]: (editor) => insertCodeBlock(editor, { select: true }),
   [EquationPlugin.key]: (editor) => insertEquation(editor, { select: true }),
-  [FilePlugin.key]: (editor) => insertFilePlaceholder(editor, { select: true }),
   [INDENT_LIST_KEYS.todo]: insertList,
   [ImagePlugin.key]: (editor) =>
     insertMedia(editor, {

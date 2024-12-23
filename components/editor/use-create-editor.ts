@@ -30,10 +30,8 @@ import { ColumnItemPlugin, ColumnPlugin } from '@udecode/plate-layout/react';
 import { LinkPlugin } from '@udecode/plate-link/react';
 import {
   AudioPlugin,
-  FilePlugin,
   ImagePlugin,
   MediaEmbedPlugin,
-  PlaceholderPlugin,
   VideoPlugin,
 } from '@udecode/plate-media/react';
 import {
@@ -63,7 +61,6 @@ import { KbdLeaf } from '@/components/plate-ui/kbd-leaf';
 import { LinkElement } from '@/components/plate-ui/link-element';
 import { MediaAudioElement } from '@/components/plate-ui/media-audio-element';
 import { MediaEmbedElement } from '@/components/plate-ui/media-embed-element';
-import { MediaFileElement } from '@/components/plate-ui/media-file-element';
 import { MediaVideoElement } from '@/components/plate-ui/media-video-element';
 import { MentionElement } from '@/components/plate-ui/mention-element';
 import { MentionInputElement } from '@/components/plate-ui/mention-input-element';
@@ -88,7 +85,6 @@ export const useCreateEditor = () => {
         [ColumnPlugin.key]: ColumnGroupElement,
         [DatePlugin.key]: DateElement,
         [EmojiInputPlugin.key]: EmojiInputElement,
-        [FilePlugin.key]: MediaFileElement,
         [HEADING_KEYS.h1]: withProps(HeadingElement, { variant: 'h1' }),
         [HEADING_KEYS.h2]: withProps(HeadingElement, { variant: 'h2' }),
         [HEADING_KEYS.h3]: withProps(HeadingElement, { variant: 'h3' }),
