@@ -6,7 +6,7 @@ export const blockSelectionPlugins = [
   BlockSelectionPlugin.configure({
     inject: {
       excludeBelowPlugins: ['tr'],
-      excludePlugins: ['table', 'code_line', 'column_group', 'column'],
+      excludePlugins: ['code_line', 'column_group', 'column'],
     },
     options: {
       enableContextMenu: true,

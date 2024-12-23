@@ -43,12 +43,6 @@ import {
   MentionPlugin,
 } from '@udecode/plate-mention/react';
 import { SlashInputPlugin } from '@udecode/plate-slash-command/react';
-import {
-  TableCellHeaderPlugin,
-  TableCellPlugin,
-  TablePlugin,
-  TableRowPlugin,
-} from '@udecode/plate-table/react';
 import { TogglePlugin } from '@udecode/plate-toggle/react';
 
 import { copilotPlugins } from '@/components/editor/plugins/copilot-plugins';
@@ -82,12 +76,6 @@ import { MentionInputElement } from '@/components/plate-ui/mention-input-element
 import { ParagraphElement } from '@/components/plate-ui/paragraph-element';
 import { withPlaceholders } from '@/components/plate-ui/placeholder';
 import { SlashInputElement } from '@/components/plate-ui/slash-input-element';
-import {
-  TableCellElement,
-  TableCellHeaderElement,
-} from '@/components/plate-ui/table-cell-element';
-import { TableElement } from '@/components/plate-ui/table-element';
-import { TableRowElement } from '@/components/plate-ui/table-row-element';
 import { TocElement } from '@/components/plate-ui/toc-element';
 import { ToggleElement } from '@/components/plate-ui/toggle-element';
 
@@ -130,10 +118,6 @@ export const useCreateEditor = () => {
         [StrikethroughPlugin.key]: withProps(PlateLeaf, { as: 's' }),
         [SubscriptPlugin.key]: withProps(PlateLeaf, { as: 'sub' }),
         [SuperscriptPlugin.key]: withProps(PlateLeaf, { as: 'sup' }),
-        [TableCellHeaderPlugin.key]: TableCellHeaderElement,
-        [TableCellPlugin.key]: TableCellElement,
-        [TablePlugin.key]: TableElement,
-        [TableRowPlugin.key]: TableRowElement,
         [TocPlugin.key]: TocElement,
         [TogglePlugin.key]: ToggleElement,
         [UnderlinePlugin.key]: withProps(PlateLeaf, { as: 'u' }),

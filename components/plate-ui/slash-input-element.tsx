@@ -1,7 +1,5 @@
 'use client';
 
-import React from 'react';
-
 import { withRef } from '@udecode/cn';
 import { AIChatPlugin } from '@udecode/plate-ai/react';
 import { BlockquotePlugin } from '@udecode/plate-block-quote/react';
@@ -11,7 +9,6 @@ import { DatePlugin } from '@udecode/plate-date/react';
 import { HEADING_KEYS } from '@udecode/plate-heading';
 import { TocPlugin } from '@udecode/plate-heading/react';
 import { INDENT_LIST_KEYS, ListStyleType } from '@udecode/plate-indent-list';
-import { TablePlugin } from '@udecode/plate-table/react';
 import { TogglePlugin } from '@udecode/plate-toggle/react';
 import {
   CalendarIcon,
@@ -27,7 +24,6 @@ import {
   Quote,
   SparklesIcon,
   Square,
-  Table,
   TableOfContentsIcon,
 } from 'lucide-react';
 
@@ -134,11 +130,6 @@ const groups: Group[] = [
         keywords: ['```'],
         label: 'Code Block',
         value: CodeBlockPlugin.key,
-      },
-      {
-        icon: <Table />,
-        label: 'Table',
-        value: TablePlugin.key,
       },
       {
         icon: <Quote />,

@@ -49,7 +49,6 @@ import { MarkToolbarButton } from './mark-toolbar-button';
 import { MediaToolbarButton } from './media-toolbar-button';
 import { ModeDropdownMenu } from './mode-dropdown-menu';
 import { OutdentToolbarButton } from './outdent-toolbar-button';
-import { TableDropdownMenu } from './table-dropdown-menu';
 import { ToggleToolbarButton } from './toggle-toolbar-button';
 import { ToolbarGroup } from './toolbar';
 import { TurnIntoDropdownMenu } from './turn-into-dropdown-menu';
@@ -127,7 +126,6 @@ export function FixedToolbarButtons() {
 
           <ToolbarGroup>
             <LinkToolbarButton />
-            <TableDropdownMenu />
             <EmojiDropdownMenu />
           </ToolbarGroup>
 

@@ -26,12 +26,6 @@ import type {
   MentionInputPlugin,
   MentionPlugin,
 } from '@udecode/plate-mention/react';
-import type { TTableElement } from '@udecode/plate-table';
-import type {
-  TableCellPlugin,
-  TablePlugin,
-  TableRowPlugin,
-} from '@udecode/plate-table/react';
 import type { TToggleElement } from '@udecode/plate-toggle';
 import type { TogglePlugin } from '@udecode/plate-toggle/react';
 
@@ -150,21 +144,6 @@ export interface MyCodeLineElement extends TElement {
   type: typeof CodeLinePlugin.key;
 }
 
-export interface MyTableElement extends TTableElement, MyBlockElement {
-  children: MyTableRowElement[];
-  type: typeof TablePlugin.key;
-}
-
-export interface MyTableRowElement extends TElement {
-  children: MyTableCellElement[];
-  type: typeof TableRowPlugin.key;
-}
-
-export interface MyTableCellElement extends TElement {
-  children: MyNestableBlock[];
-  type: typeof TableCellPlugin.key;
-}
-
 export interface MyToggleElement extends TToggleElement, MyBlockElement {
   children: MyInlineChildren;
   type: typeof TogglePlugin.key;
@@ -207,15 +186,6 @@ export type MyRootBlock =
   | MyImageElement
   | MyMediaEmbedElement
   | MyParagraphElement
-  | MyTableElement
   | MyToggleElement;
 
 export type MyValue = MyRootBlock[];
-
-// export type MyElement = ElementOf<MyEditor>;
-
-// export type MyBlock = Exclude<MyElement, MyInlineElement>;
-
-// export type MyEditor = ReturnType<typeof useCreateEditor>;
-
-// export const useEditor = () => useEditorRef<MyEditor>();
