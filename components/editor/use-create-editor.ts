@@ -62,6 +62,15 @@ import { SlashInputElement } from '@/components/plate-ui/slash-input-element';
 import { TocElement } from '@/components/plate-ui/toc-element';
 import { ToggleElement } from '@/components/plate-ui/toggle-element';
 
+const v = [
+      {
+        children: [{ text: 'Some text' }],
+        type: 'h1',
+      },
+    ]
+
+const _v = JSON.stringify(v);
+
 export const useCreateEditor = () => {
   return usePlateEditor({
     override: {
@@ -105,11 +114,6 @@ export const useCreateEditor = () => {
       FixedToolbarPlugin,
       FloatingToolbarPlugin,
     ],
-    value: [
-      {
-        children: [{ text: 'Playground' }],
-        type: 'h1',
-      },
-    ],
+    value: JSON.parse(_v)
   });
 };
